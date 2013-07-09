@@ -13,6 +13,6 @@ Here is the list of your favorites:
 
 <ul>
 <% current_user.books.each do | book| %>
-<li><%= book.title %> - <%= book.author %> </li>
+<li><%= book.title %> - <%= book.author %> <%= link_to 'Remove', book_path(book.id), :method => :delete, :class => "delete" %></li>
 <% end %>
 </ul>
