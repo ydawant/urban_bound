@@ -1,0 +1,18 @@
+Welcome <%= @user.first_name %> to your homepage!
+
+Add a book to your list of favorites:
+
+<%= form_tag books_path do %>
+    <%= text_field_tag :title, nil, :placeholder => "Title", :autofocus => true %>
+    <%= text_field_tag :author, nil, :placeholder => "Author" %>
+    <%= button_tag "Add Book" %>
+  <% end %>
+
+Here is the list of your favorites:
+
+
+<ul>
+<% current_user.books.each do | book| %>
+<li><%= book.title %> - <%= book.author %> </li>
+<% end %>
+</ul>
