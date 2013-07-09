@@ -1,4 +1,4 @@
-Welcome <%= @user.first_name %> to your homepage!
+Welcome <%= @user.first_name %> to your homepage!  <%= link_to 'Sign Out', logout_path(current_user.id) %><br>
 
 Add a book to your list of favorites:
 
