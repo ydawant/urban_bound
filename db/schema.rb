@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130709184044) do
+ActiveRecord::Schema.define(:version => 20130709222004) do
 
   create_table "all_books", :force => true do |t|
     t.integer  "user_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20130709184044) do
     t.string   "author"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "rating"
   end
 
   create_table "users", :force => true do |t|

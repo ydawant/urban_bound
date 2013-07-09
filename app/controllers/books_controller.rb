@@ -7,7 +7,7 @@ class BooksController < ApplicationController
   def create
     book = Book.find_by_title_and_author(params[:title].chomp, params[:author].chomp)
     p params[:book]
-    book.nil? ? book = Book.create(:title => params[:title], :author => params[:author]) : book
+    book.nil? ? book = Book.create(:title => params[:title], :author => params[:author], :rating => params[:rating]) : book
     if AllBook.find_by_book_id_and_user_id(book.id, current_user.id).nil?
       current_user.books << book  
     end
