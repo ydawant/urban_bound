@@ -7,13 +7,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
-    if @user.save
-      session[:current_user_id] = @user.id
+    user = User.new(params[:user])
+    if user.save
+      session[:current_user_id] = user.id
       flash[:success] = "You have signed up successfully!"
-      redirect_to user_path(@user)
+      redirect_to user_path(user)
     else
-      flash[:error] = @user.errors.full_messages.last
+      flash[:error] =  "Unsuccessful login. Please try again."
       redirect_to :back
     end
   end

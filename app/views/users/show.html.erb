@@ -18,6 +18,6 @@ Here is the list of your favorites:
 
 <ul>
 <% current_user.books.each do | book| %>
-<li><%= book.title %> - <%= book.author %> (<%= book.rating %>) <%= link_to 'Remove', book_path(book.id), :method => :delete, :class => "delete" %></li>
+<li><%= book.title %> - <%= book.author %> (<%= AllBook.find_by_user_id_and_book_id(current_user.id, book.id).rating %>) <%= link_to 'Remove', book_path(book.id), :method => :delete, :class => "delete" %></li>
 <% end %>
 </ul>

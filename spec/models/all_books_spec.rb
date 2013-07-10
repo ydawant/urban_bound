@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe AllBooks do
+describe AllBook do
 
-  it { should be_instance_of(AllBooks) }
+  it { should be_instance_of(AllBook) }
   it { should belong_to(:user) }
   it { should belong_to(:book) }
 

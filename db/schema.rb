@@ -18,17 +18,17 @@ ActiveRecord::Schema.define(:version => 20130709222004) do
     t.integer  "book_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "rating"
   end
 
   add_index "all_books", ["book_id"], :name => "index_all_books_on_book_id"
   add_index "all_books", ["user_id"], :name => "index_all_books_on_user_id"
 
   create_table "books", :force => true do |t|
-    t.string   "title"
-    t.string   "author"
+    t.string   "title",      :null => false
+    t.string   "author",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "rating"
   end
 
   create_table "users", :force => true do |t|
