@@ -9986,3 +9986,31 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-10 13:18:37 -0500
 Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/logout.1" for 127.0.0.1 at 2013-07-10 13:29:04 -0500
+Processing by SessionsController#logout as 
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-10 13:29:04 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-10 13:29:04 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-10 13:29:05 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-10 13:29:05 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-10 13:29:05 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
